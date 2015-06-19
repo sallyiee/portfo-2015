@@ -363,6 +363,33 @@ module.exports = function (grunt) {
         html: ['<%= yeoman.dist %>/*.html']
       }
     },
+    buildcontrol: {
+    options: {
+      dir: 'dist',
+      commit: true,
+      push: true,
+      message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+    },
+    pages: {
+      options: {
+        remote: 'git@github.com:example_user/example_webapp.git',
+        branch: 'gh-pages'
+      }
+    },
+    heroku: {
+      options: {
+        remote: 'git@heroku.com:example-heroku-webapp-1988.git',
+        branch: 'master',
+        tag: pkg.version
+      }
+    },
+    local: {
+      options: {
+        remote: '../',
+        branch: 'build'
+      }
+    }
+  },
 
     // Copies remaining files to places other tasks can use
     copy: {
@@ -422,63 +449,8 @@ module.exports = function (grunt) {
         singleRun: true
       }
     }
-
   });
-  
-  buildcontrol: {
-    options: {
-      dir: 'dist',
-      commit: true,
-      push: true,
-      message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-    },
-    pages: {
-      options: {
-        remote: 'git@github.com:example_user/example_webapp.git',
-        branch: 'gh-pages'
-      }
-    },
-    heroku: {
-      options: {
-        remote: 'git@heroku.com:example-heroku-webapp-1988.git',
-        branch: 'master',
-        tag: pkg.version
-      }
-    },
-    local: {
-      options: {
-        remote: '../',
-        branch: 'build'
-      }
-    },
-     buildcontrol: {
-      options: {
-        dir: 'dist',
-        commit: true,
-        push: true,
-        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-      },
-      pages: {
-        options: {
-          remote: 'git@github.com:sallyiee/portfo-2015.git',
-          branch: 'gh-pages'
-        }
-      },
-      heroku: {
-        options: {
-          remote: 'git@heroku.com:example-heroku-webapp-1988.git',
-          branch: 'master',
-          tag: pkg.version
-        }
-      },
-      local: {
-        options: {
-          remote: '../',
-          branch: 'build'
-        }
-      }
-    }
-  }
+
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
