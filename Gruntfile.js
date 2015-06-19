@@ -92,6 +92,7 @@ module.exports = function (grunt) {
           }
         }
       },
+
       test: {
         options: {
           port: 9001,
@@ -304,16 +305,6 @@ module.exports = function (grunt) {
     //   dist: {}
     // },
 
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg,gif}',
-          dest: '<%= yeoman.dist %>/images'
-        }]
-      }
-    },
 
     svgmin: {
       dist: {
@@ -324,6 +315,11 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>/images'
         }]
       }
+    },
+    cssmin: {
+    options: {
+       processImport: false
+    }
     },
 
     htmlmin: {
@@ -437,7 +433,6 @@ module.exports = function (grunt) {
       ],
       dist: [
         'compass:dist',
-        'imagemin',
         'svgmin'
       ]
     },
