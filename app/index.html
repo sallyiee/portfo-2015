@@ -2,108 +2,58 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
+    <title>Sally's Portfolio 2015</title>
+    <meta name="description" content="A personal portfolio.">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
   </head>
   <body ng-app="portfo2015App">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <!-- Add your site or application content here -->
-    <header class="clearfix">
-<!--       <div class="header">
-        <div class="navbar navbar-default" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-          
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="js-navbar-collapse">
-              <ul class="nav navbar-nav">
-                <li class="logo"><a href="#">Sally Lee</a></li>
-                <li class="active"><a href="#/">Home</a></li>
-                <li><a ng-href="#/about">About</a></li>
-                <li><a ng-href="#/">Contact</a></li>
-              </ul>
-            </div>
+    <nav class="main-menu">
+      <li><a href="#/"><img src="images/logo.png" alt="Sally Lee Portfolio 2015"></a></li>
+      <li class="project-menu">Projects</li>
+      <ul class="unstyled project-menu-list">
+        <li><a title="Cuzin" href="/#/cuzin">Cuzin</a></li>
+        <li><a title="Cuzin" href="/#/spot">Spotspiers</a></li>
+        <li><a title="Cuzin" href="/#/withwine">WithWine</a></li>
+      </ul>
+      <li><a title="Blog" href="http://sallyleeblog.tumblr.com/" target="_blank">Blogs</a></li>
+      <li>
+        <ul class="unstyled social-media-contact">
+          <li class="linkedin"><a href="https://au.linkedin.com/pub/sally-lee/24/689/a92" target="_blank" title="Sally's LinkedIn"><i class="fa fa-linkedin-square"></i></a></li>
+          <li class="twitter"><a href="https://twitter.com/SallyIee" title="Sally's Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+          <li class="git"><a href="https://github.com/sallyiee" title="Sally's GIT HUB" target="_blank"><i class="fa fa-github"></i></a></li>
+          <li class="email"><a href="mailto:sally.amy.lee@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        </ul>
+      </li>
+    </nav>
+    <div class="clearfix">
+          <div class=" main-nav">
+            <a href="#" id="toggle-menu"><i class="fa  fa-align-left"></i></a>
           </div>
-        </div>
-      </div> -->
-      <div class="left-col">
-          <div class="title-container">
-            <div class="title">
-              <p class="small">Portfolio 2015</p>
-              <div class="divider"></div>
-              <h1>Front End and UX <br> Developer</h1>
-            </div>
-          </div>
-        
-      </div>
-      <div class="right-col">
-        <h2>Hello There,</h2>
-        <p>My name is Sally, I'm a front-end developer with 4 years of agency experience. I enjoy creating inovative and lightweighted front-end solutions. I love coming up with new ways to enhance user experience. In the spare time, I love to travel and experimenting with new food!</p>
-      </div>
-<!--       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="title-container">
-              <div class="title">
-                  <p class="small">Portfolio 2015</p>
-                  <div class="divider"></div>
-                  <h1>Front End and UX Developer</h1> 
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="title-container">
-              <div class="title title-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, dignissimos, optio. Obcaecati explicabo, ad quia alias laboriosam voluptatum suscipit velit mollitia vitae tempora. Blanditiis laboriosam, molestias tenetur maiores perspiciatis nam?</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </header>
-
-    <div class="container">
-    <div ng-view=""></div>
     </div>
 
-<!--     <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div> -->
-
+  <div class="page-wrapper">
+    <div ng-view=""></div>
+  </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
+      ga('create', 'UA-38562079-1', 'auto');
+      ga('send', 'pageview');
+
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -121,9 +71,7 @@
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="scripts/TweenLite.min.js"></script>
-    <script src="scripts/EasePack.min.js"></script>
-    <script src="scripts/rAF.js"></script>
+    <script src="scripts/menu.js"></script>
     <script src="scripts/background.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>

@@ -1,0 +1,189 @@
+.page__info--left-col, .page__info--right-col{
+  @media screen and (min-width: $screen-desktop){  
+  	width: 49.99992%;
+  	float: left;
+  }
+}
+
+
+.page__info--left-col{
+   @media screen and (min-width: $screen-desktop){  
+	   background: url('../images/table-bg.jpg') no-repeat center center fixed;
+	   min-height: 100vh;
+	   background-size: cover;
+	   &.cuzin{
+	    background: url('../images/projects/cuzin-lg.jpg') no-repeat center center fixed;
+      min-height: 100vh;
+      background-size: cover;
+	   }
+     &.spot{
+      background: url('../images/projects/spot-lg.jpg') no-repeat center center fixed;
+      min-height: 100vh;
+      background-size: cover;
+     }
+     &.withwine{
+        background: url('../images/projects/withwine-lg.jpg') no-repeat center center;
+        min-height: 100vh;
+        background-size: cover;
+     }
+   }
+}
+
+.page__info--right-col{
+  min-height: 100vh;
+  &.cuzin{
+    background: url('../images/projects/cuzin-lg-blurred.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  &.spot{
+    background: url('../images/projects/spot-lg-blurred.jpg') no-repeat center top;
+    background-size: cover;
+  }
+  &.withwine{
+    background: url('../images/projects/withwine-lg-blurred.jpg') no-repeat center top;
+    background-size: cover;
+  }
+}
+
+.page-wrapper{
+  position: relative;
+  @media screen and (min-width: $screen-desktop){  
+    min-height: 100%;
+  }
+}
+
+.page__info--left-col{
+  position: fixed;
+  left: 0;
+}
+
+.page__info--right-col {
+  @media screen and (min-width: $screen-desktop){ 
+    width: 50%;
+    float: right;
+  }
+}
+
+.section-container-wrapper{
+  position: relative;
+  @media screen and (max-width: $screen-desktop){ 
+    overflow: hidden;
+  }
+}
+
+.section-container{
+  position:relative;
+  width:100%;
+  z-index:1000;
+}
+
+.vertical-align{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  color: #FFF;
+  text-transform: uppercase;
+
+}
+
+.page__info--title{
+    color: #FFF;
+    text-transform: none;
+    font-weight: 100;
+    // text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    h2{
+      font-size: 4em;
+      font-weight: 100;
+      margin-top: 40px;
+      @extend .main__spacing--30px;
+    }
+    p{
+      font-size: 1.25em;
+      &:last-of-type{
+        @extend .main__spacing--30px;
+      }
+    }
+    i{
+      font-size: 4em;
+    }
+}
+
+
+.vertical-align__container{
+  height: 100vh;
+  position: relative;
+}
+
+
+.portfo-piece__tech{
+  list-style: none;
+  padding: 0;
+  li{
+    width: 49%;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 15px;
+    box-sizing: border-box;
+    span{
+      display: block;
+      padding-top: 15px;
+    }
+    img{
+      display: block;
+      width: 50px;
+      margin: auto;
+      filter: greyscale(1);
+    }
+  }
+}
+
+.introduction{
+  background: url('../images/table-bg-blurred.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+  h1, h2{
+    text-transform: none;
+  }
+
+ h1{
+  font-size: 2em;
+    @media screen and (min-width: $screen-desktop){ 
+      font-size: 3em;
+      margin-bottom: 40px;
+    }
+    border-bottom: 5px solid orange;
+    display: inline-block;
+    line-height: 1.3;
+    width: 60%;
+    display: inline-block;
+    @media screen and (min-width: $screen-size__mobile){
+      
+      margin-bottom: 0;
+    }
+  }
+
+  h2{
+    @media screen and (min-width: $screen-desktop){ 
+      font-size: 3em;
+    }
+    font-weight: 100;
+    margin-top: 0;
+  }
+
+  .intro-wrapper{
+    padding: 60px 0;
+    margin: auto;
+  }
+
+  .main-logo{
+    width: 200px;
+    img{
+      width: 100%;
+    }
+  }
+}

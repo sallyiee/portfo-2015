@@ -1,0 +1,181 @@
+/* Base */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#toggle-menu {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 0;
+}
+
+.main-menu {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	width: 230px;
+	padding: 15px 25px;
+	margin: 0;
+
+	list-style: none;
+	background: #000;
+	z-index: 10; /* Make sure the z-index is lower than the .page-wrapper */
+
+	img{
+		width: 100%;
+	}
+
+	li:last-of-type{
+		a{
+			border-bottom: none;
+		}
+	}
+}
+
+.main-menu a {
+	display: block;
+	color: #fff;
+	padding: 15px 0;
+	// border-bottom: 1px solid rgba( 255, 255, 255, 0.2);
+
+}
+
+/* Animations */
+
+// .page-wrapper, .main-menu {
+// 	-webkit-backface-visibility: hidden;
+// 	-webkit-perspective: 1000;
+// }
+
+/* Hide the menu unless it's animating or visible */
+.animating .main-menu, .menu-visible .main-menu {
+	display: block;
+}
+
+/***
+* If the animating class is present then apply
+* the CSS transition to .page-wrapper over 250ms.
+*/
+.animating .page-wrapper {
+	transition: transform .25s ease-in-out;
+	-webkit-transition: -webkit-transform .25s ease-in-out;
+}
+
+/***
+* If the left class is present then transform
+* the .page-wrapper element 240px to the left.
+*/	
+.animating.left .page-wrapper {
+	transform: translate3d( -240px, 0, 0 );
+	-webkit-transform: translate3d( -240px, 0, 0 );
+}
+
+/***
+* If the right class is present then transform
+* the .page-wrapper element 240px to the right.
+*/
+.animating.right .page-wrapper {
+	transform: translate3d( 240px, 0, 0 );
+	-webkit-transform: translate3d( 240px, 0, 0 );
+}
+
+/***
+* If the menu-visible class is present then
+* shift the .page-wrapper 240px from the right edge
+* via position: absolute to keep it in the 
+* open position. When .animating, .left and
+* .right classes are not present the CSS
+* transform does not apply to .page-wrapper.
+*/
+.menu-visible .page-wrapper {
+	right: 240px;
+}
+
+.main-nav-container{
+  position: relative;
+
+}
+
+.main-nav{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 2em;
+  z-index: 500;
+  a{
+    color: rgba(255, 255, 255, 0.2);
+    display: block;
+    font-weight: 100;
+    &:hover{
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+  }
+}
+.menu-visible .main-nav{
+  z-index: -100;
+}
+
+.social-media-contact{
+  padding: 0;
+  li{
+    display: inline-block;
+    font-size: 1.8em;
+    padding: 0 10px;
+    a{
+    	&:hover{
+    		color: #a7896f;
+    	}
+    }
+    &:first-of-type{
+      padding-left: 0;
+    }
+  }
+}
+
+
+.project-menu{
+	background-color: #FFF;
+	color: #000;
+	display: inline-block;
+}
+
+.project-menu-list{
+	padding-left: 15px;
+	a{
+		padding: 8px 0;
+	}
+	li:last-of-type{
+		padding-bottom: 0;
+	}
+}
+
+.linkedin{
+	&:hover{
+		i{
+			color: #0077b5;
+		}
+	}
+}
+
+.twitter{
+	&:hover{
+		i{
+			color: #55acee;
+		}
+	}
+}
+
+.git{
+	&:hover{
+		i{
+			color: #4078c0;
+		}
+	}
+}
